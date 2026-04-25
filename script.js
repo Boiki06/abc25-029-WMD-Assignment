@@ -588,8 +588,6 @@ function placeOrder(event){
   if(payment.value === "payNow" && !validateCardDetails()){
     return;
   }
-
-  let total = cart.reduce((sum, item) => sum + (Number(item.total) || 0), 0);
   let user = getCurrentUser();
   let order = {
     id: Date.now(),
@@ -735,6 +733,10 @@ function displayAccount(){
       <div class="booking-box">
         <h3>Not signed in</h3>
         <p>Please <a href="login.html">log in</a> or <a href="signup.html">sign up</a> to view your account.</p>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="login.html" class="button">Log In</a>
+          <a href="signup.html" class="button button-secondary">Sign Up</a>
+        </div>
       </div>
     `;
     return;
