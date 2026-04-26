@@ -1,3 +1,4 @@
+/* Global CSS variables for theme colors */
 :root {
   --primary: #5f4d0d;
   --secondary: #6aa84f;
@@ -8,6 +9,7 @@
   --muted: #6c757d;
 }
 
+/* Base page styling */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -15,7 +17,7 @@ body {
   color: var(--text);
 }
 
-/* HEADER */
+
 header {
   display: flex;
   align-items: center;
@@ -41,7 +43,7 @@ header {
   font-weight: bold;
 }
 
-/* NAV */
+
 nav {
   display: flex;
   gap: 15px;
@@ -61,24 +63,21 @@ nav a:hover {
   color: white;
 }
 
-
-
-
-
-/* HERO */
+/* Hero section on homepage */
 .hero {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(to right, #e8f5e9, #ffffff);
 }
 
-/* LAYOUT */
+/* Wrapper for content sections */
 .container {
   max-width: 1100px;
   margin: auto;
 }
 
-/* CARDS */
+
+/* Card layout used across products, events, and features */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -116,7 +115,7 @@ nav a:hover {
   border-radius: 8px;
 }
 
-/* GRID FOR PRODUCTS */
+/* Product grid layout for the shop page */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,7 +123,7 @@ nav a:hover {
   padding: 40px;
 }
 
-/* BUTTON */
+
 button {
   padding: 10px;
   border-radius: 6px;
@@ -138,7 +137,7 @@ button:hover {
   background: #5a9442;
 }
 
-/* BUTTON CLASS FOR LINKS */
+
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -153,13 +152,14 @@ button:hover {
   margin: 5px;
 }
 
+/* Button styles used for actions and links */
 .button:hover {
   background: #5a9442;
   color: white;
   text-decoration: none;
 }
 
-/* QUANTITY CONTROLS */
+/* Quantity input controls for products, cooler passes, and bookings */
 .quantity-controls {
   display: flex;
   justify-content: center;
@@ -177,7 +177,7 @@ button:hover {
   margin-top: 5px;
 }
 
-/* BADGE */
+
 .badge {
   position: absolute;
   top: 10px;
@@ -189,13 +189,13 @@ button:hover {
   font-size: 12px;
 }
 
-/* TITLES */
+
 .section-title {
   text-align: center;
   margin-top: 40px;
 }
 
-/* FOOTER */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -222,7 +222,7 @@ textarea {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-/* ⭐ Highlight important tips */
+
 .highlight {
   background: #fff3cd;
   padding: 10px;
@@ -231,12 +231,12 @@ textarea {
   border-radius: 6px;
 }
 
-/* 🔽 Read more hidden */
+
 .more-text {
   display: none;
 }
 
-/* 🔥 Popular tips */
+
 .popular {
   background: #f0f8f0;
   padding: 20px;
@@ -278,7 +278,7 @@ textarea {
   text-align: center;
 }
 
-/* Align radio button labels with dots */
+
 .form-check-label {
   vertical-align: middle;
   margin-left: 5px;
@@ -310,20 +310,20 @@ textarea {
   flex: 1;
 }
 
-/* BUTTON GROUP */
+
 .cart-controls {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-/* SMALLER BUTTONS */
+
 .cart-controls button {
   padding: 5px 8px;
   font-size: 14px;
 }
 
-/* REMOVE BUTTON */
+
 .cart-remove {
   background: #d9534f;
 }

@@ -1,11 +1,10 @@
- // Check if localStorage is available
+ /* Check whether browser supports localStorage */
 if (typeof(Storage) === "undefined") {
   alert("Sorry, your browser does not support localStorage. Please use a modern browser.");
 }
 
-// ===============================
-// 🧮 QUANTITY + PRICE (PRODUCTS)
-// ===============================
+
+/* Quantity helpers for products and bookings */
 function changeQty(qtyId, totalId, price, delta = 1){
   let input = document.getElementById(qtyId);
   if(!input) return;
@@ -32,7 +31,7 @@ function updateTotal(qtyId, totalId, price){
     "Total: BWP " + (qty * price).toFixed(2);
 }
 
-// PER KG PRODUCTS
+
 function updateWeightPrice(sizeId, totalId, pricePerKg){
   let weight = parseFloat(document.getElementById(sizeId).value) || 0;
   let total = weight * pricePerKg;
@@ -41,9 +40,7 @@ function updateWeightPrice(sizeId, totalId, pricePerKg){
     "Total: BWP " + total.toFixed(2);
 }
 
-// ===============================
-// 🛒 CART SYSTEM
-// ===============================
+/* Cart storage helpers using localStorage */
 function getCart(){
   try {
     let stored = JSON.parse(localStorage.getItem("cart"));
@@ -58,7 +55,7 @@ function saveCart(cart){
   updateCartCount();
 }
 
-// ✅ ADD TO CART (FIXED)
+
 function addToCart(name, price, quantity, type="product"){
   quantity = parseFloat(quantity) || 1;
 
@@ -83,9 +80,7 @@ function addToCart(name, price, quantity, type="product"){
   updateCartCount();
 }
 
-// ===============================
-// 🛒 CART COUNT
-// ===============================
+
 function updateCartCount(){
   let cart = getCart();
   let count = cart.reduce((sum, i) => sum + Number(i.quantity), 0);
@@ -94,9 +89,7 @@ function updateCartCount(){
   if(el) el.innerText = count;
 }
 
-// ===============================
-// 🛒 REMOVE ITEM
-// ===============================
+
 function removeItem(index){
   let cart = getCart();
   cart.splice(index,1);
@@ -105,9 +98,7 @@ function removeItem(index){
   updateCartCount();
 }
 
-// ===============================
-// 🛒 UPDATE ITEM QTY (FIXED)
-// ===============================
+
 function updateItemQty(index, change){
   let cart = getCart();
   let item = cart[index];
@@ -127,9 +118,6 @@ function updateItemQty(index, change){
   updateCartCount();
 }
 
-// ===============================
-// 🛒 CLEAR CART
-// ===============================
 function clearCart(){
   localStorage.removeItem("cart");
   displayCart();
@@ -149,6 +137,7 @@ function getOrders(){
   }
 }
 
+/* Order and user storage helpers */
 function saveOrders(orders){
   localStorage.setItem("orders", JSON.stringify(orders));
 }
@@ -359,6 +348,7 @@ function getLastReceiptOrder(){
   return match || null;
 }
 
+/* Display helpers for cart, checkout, tracking and receipts */
 function displayCart(){
   let cart = getCart();
   let box = document.getElementById("cartDisplay");
@@ -863,9 +853,8 @@ function displaySignup(){
   }
 }
 
-// ===============================
-// 🏕️ BOOKING SYSTEM (FINAL)
-// ===============================
+
+/* Booking workflow for farm stays, tours, and packages */
 let pendingBooking = null;
 
 function bookNow(type, pricePerNight, maxGuests){
@@ -1008,9 +997,7 @@ function displayBookings(){
   box.innerHTML = html;
 }
 
-// ===============================
-// 🛒 ADD BOOKING TO CART
-// ===============================
+
 function confirmBooking(i){
   let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   let b = bookings[i];
@@ -1042,9 +1029,7 @@ function confirmBooking(i){
   alert("Booking added to cart!");
 }
 
-// ===============================
-// 🧹 REMOVE BOOKING
-// ===============================
+
 function removeBooking(i){
   let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.splice(i,1);
@@ -1052,9 +1037,8 @@ function removeBooking(i){
   displayBookings();
 }
 
-// ===============================
-// � NOTES SYSTEM
-// ===============================
+
+/* Notes, toggles, and page initialization */
 function saveNotes(){
   let user = getCurrentUser();
   if(!user){
@@ -1097,9 +1081,7 @@ function saveAccountNotes(){
   alert("Notes saved successfully!");
 }
 
-// ===============================
-// � TOGGLE READ MORE
-// ===============================
+
 function toggleRead(id, button){
   let el = document.getElementById(id);
   if(!el) return;
@@ -1113,9 +1095,7 @@ function toggleRead(id, button){
   }
 }
 
-// ===============================
-// 🎟️ BUY EVENT ITEMS
-// ===============================
+
 function buyPass(){
   addToCart('Event Pass', 50, 1, 'event');
 }
@@ -1124,9 +1104,8 @@ function buyTicket(){
   addToCart('Event Ticket', 30, 1, 'event');
 }
 
-// ===============================
-// 🚀 LOAD
-// ===============================
+
+/* Page initialization: update UI and load dynamic page content */
 window.addEventListener('load', function(){
   updateCartCount();
   displayCart();
