@@ -1,5 +1,4 @@
-#Molejo Farms
-This is a website about a family farm owned business. It specifies, the farm details
+This is a website about a family farm owned business, Molejo Farms. It specifies, the farm details and purpose
 It contains:
 1. Product Shop
 2. Event Ticket Shop
