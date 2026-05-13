@@ -502,3 +502,289 @@ textarea {
 .contact-card li {
   margin: 8px 0;
 }
+
+/* ================================ */
+/* MOBILE RESPONSIVE (max-width: 768px) */
+/* ================================ */
+@media (max-width: 768px) {
+  /* Header & Navigation */
+  header {
+    padding: 15px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* Container */
+  .container {
+    padding: 16px;
+  }
+
+  /* Cards Grid */
+  .cards {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card-link {
+    width: 100%;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* Forms & Inputs */
+  .booking-box {
+    max-width: 100%;
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .booking-box input,
+  .booking-box textarea,
+  .booking-box select,
+  .account-section input,
+  .account-section textarea,
+  .account-section select {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .booking-box .button,
+  .button {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+  }
+
+  /* Cart Items */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cart-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Account Sections */
+  .account-section {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+
+  /* Saved Addresses */
+  .saved-address {
+    padding: 12px;
+  }
+
+  /* Receipt Items */
+  .receipt-item {
+    padding: 12px;
+  }
+
+  .receipt-items {
+    padding: 10px;
+  }
+
+  /* Checkout Layout */
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Center Section */
+  .center-section {
+    max-width: 100%;
+    padding: 16px;
+    margin: 20px 16px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 16px 12px;
+    font-size: 13px;
+  }
+
+  /* Forms */
+  form {
+    width: 100%;
+  }
+
+  /* Package Images */
+  .package-images {
+    flex-direction: column;
+  }
+
+  .package-images img {
+    width: 100%;
+  }
+
+  /* Text sizing */
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Quantity Controls */
+  .quantity-controls {
+    flex-direction: column;
+  }
+
+  .quantity-controls input {
+    width: 100%;
+  }
+
+  /* Checkbox Labels */
+  .form-check-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  /* Buttons within forms */
+  .booking-box button,
+  .account-section button {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small phones */
+  header {
+    padding: 12px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  nav {
+    gap: 4px;
+  }
+
+  nav a {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 40px 12px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .cards {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .product-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .booking-box {
+    margin: 12px;
+    padding: 12px;
+  }
+
+  .center-section {
+    margin: 16px 12px;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+}
